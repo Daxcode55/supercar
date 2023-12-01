@@ -1,11 +1,133 @@
-*,html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* login style */
+
+.container-login {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #eaeaea;
+}
+
+.content-left-login {
+  width: 45%;
+  height: 563px;
+  background: #8592d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-left-login img {
+  max-width: 95%;
+  height: auto;
+}
+
+.content-right-login {
+  width: 40%;
+  height: 563px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-right-login .title-login {
+  color: #8592d9;
+  font-family: Poppins;
+  font-size: 3.5vw;
+  font-weight: 700;
+  margin-top: 49px;
+  margin-bottom: 20px;
+}
+
+.content-right-login .title-login span {
+  font-size: 4vw;
+}
+
+.container-login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wraper-form-login {
+  width: 90%;
+}
+
+.wraper-form-login .form-grup {
+  position: relative;
+}
+
+.wraper-form-login .form-control {
+  width: 100%;
+  height: 60px;
+  padding: 15px 0 15px 82px;
+  border-radius: 30px;
+  border: 1px solid #000;
+  background: rgba(243, 243, 243, 0);
+  color: rgba(0, 0, 0, 0.7);
+  font-family: Poppins;
+  font-size: 1.5vw;
+  font-weight: 400;
+  outline: none;
+}
+
+.icon-form-login {
+  position: absolute;
+  top: 16px;
+  bottom: 16px;
+  left: 33px;
+}
+
+.formpass {
+  margin: 39px 0 52px 0;
+}
+
+.wraper-form-login .btn-login {
+  border: none;
+  width: 100%;
+  height: 60px;
+  border-radius: 30px;
+  background: #4f71eb;
+  cursor: pointer;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 1.6vw;
+  font-weight: 600;
+}
+
+.wraper-form-login .btn-login:hover {
+  background: #3455ca;
+  transition: 0.3s;
+}
+
+.alert {
+  width: 87%;
+  height: 44px;
+  padding: 8px 0 8px 15px;
+  border-radius: 5px;
+  background: #ffc8c8;
+  color: #da2f2f;
+  font-family: Poppins;
+  font-size: 1.1vw;
+  font-weight: 400;
+}
+
+/* login style end */
+
 header {
-    width: 100%;
-    height: 70px;
-    background-color: rgb(87, 87, 245);
+  width: 100%;
+  height: 70px;
+  background-color: rgb(87, 87, 245);
 }
