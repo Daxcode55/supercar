@@ -126,8 +126,129 @@ html {
 
 /* login style end */
 
-header {
-  width: 100%;
-  height: 70px;
-  background-color: rgb(87, 87, 245);
+/* dashboard style start */
+
+.header-top-nav {
+  float: right;
+  /* width: 1072px; */
+  width: 79%;
+  height: 67px;
+  flex-shrink: 0;
+  background: #3b519c;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
+
+.header-top-nav .content-nav-top {
+  display: flex;
+  align-items: center;
+  margin-right: 4rem;
+  /* margin-right: 70px; */
+}
+
+.content-nav-top .arrow-bot {
+  margin-left: 21px;
+}
+
+aside {
+  float: right;
+  width: 21%;
+  height: 100vh;
+  background: #fff;
+  box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+aside .header-side-nav {
+  background: #4c6bd2;
+  height: 67px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  align-items: center;
+}
+
+.header-side-nav h1 {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 2.2vw;
+  font-weight: 700;
+}
+
+.header-side-nav .icon-burger {
+  cursor: pointer;
+}
+
+aside .wraper-profile-side-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+aside .profile-side-nav {
+  width: 90%;
+  border-bottom: 1px solid #e1e1e1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 83px 22px 11px;
+}
+
+.profile-side-nav img {
+  max-width: 100%;
+  height: auto;
+}
+
+.profile-side-nav .desc-profile-side {
+  margin-left: 2rem;
+}
+
+.profile-side-nav .desc-profile-side .desc-nama {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 1.2vw;
+  font-weight: 400;
+  font-family: Poppins;
+}
+
+.profile-side-nav .desc-profile-side .desc-status {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 1vw;
+  font-weight: 400;
+  font-family: Poppins;
+}
+
+nav {
+  /* border: 1px solid black; */
+  width: 100%;
+  /* margin-top: 2rem; */
+  padding: 0 18px;
+}
+
+nav ul li {
+  list-style-type: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-family: Poppins;
+  font-size: 1.2vw;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 2rem;
+  padding: 12px 21px 12px 21px;
+  border-radius: 10px;
+}
+
+nav ul li a:hover {
+  background-color: #D8D8D8;
+  transition: 0.3s;
+}
+
+nav ul li a svg {
+  margin-right: 0.9rem;
+}
+/* dashboard style end */
