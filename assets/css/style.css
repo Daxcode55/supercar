@@ -130,6 +130,7 @@ html {
 
 .container-dashboard {
   display: flex;
+  background-color: #eaeaea;
 }
 
 .col-right {
@@ -241,14 +242,12 @@ aside.slideactive .profile-side-nav {
   max-width: 100%;
   height: auto;
   transition: all 0.3s ease-out;
-
 }
 
 aside.slideactive .profile-side-nav img {
   max-width: 55px;
   height: auto;
   transition: all 0.3s ease-out;
-
 }
 
 .profile-side-nav .desc-profile-side {
@@ -310,7 +309,7 @@ nav ul li a:hover {
 }
 
 aside.slideactive nav ul li a {
-	/* width: calc(48px - (4px * 2)); */
+  /* width: calc(48px - (4px * 2)); */
   padding: 0 4px 0 4px;
   transition: all 0.3s ease-in;
   position: relative;
@@ -350,6 +349,255 @@ aside.slideactive nav ul li a p {
 }
 /* dashboard style end */
 
+/* main content start */
+
 .main-content {
-  /* border: 1px solid black; */
+  background-color: #eaeaea;
+  padding: 35px 35px 0 35px;
+  overflow-y: scroll;
+  height: 90vh;
+  position: relative;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.page-location {
+  display: flex;
+  align-items: center;
+  margin-bottom: 41px;
+}
+
+.page-left {
+  display: flex;
+  align-items: center;
+  height: 45px;
+  border-right: 1px solid #adadad;
+  margin-right: 22px;
+  padding-right: 12px;
+}
+
+.page-left svg {
+  margin: 0 17px 0 0;
+}
+
+.page-left span {
+  color: #4d4d4d;
+  font-family: Poppins;
+  font-size: 2.1vw;
+  font-weight: 600;
+  letter-spacing: 0.25px;
+  margin-top: 2px;
+}
+
+.page-right {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.arr-right-content {
+  margin: 0 11px 0 11px;
+}
+
+.page-right span {
+  color: rgba(0, 0, 0, 0.6);
+  font-family: Poppins;
+  font-size: 1vw;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+}
+
+.jumbotron {
+  display: flex;
+  height: 230px;
+  align-items: center;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: -4px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.content-left-jumbotron {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-right-jumbotron {
+  width: 47%;
+  height: 198px;
+  margin-left: 88px;
+}
+
+.wraper-desc-jumbotron .desc1-jumbotron {
+  color: #3349bf;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.7vw;
+  font-weight: 300;
+  line-height: 30px;
+  letter-spacing: 0.46px;
+}
+
+.wraper-desc-jumbotron .desc1-jumbotron span {
+  font-weight: 600;
+}
+
+.wraper-desc-jumbotron .desc2-jumbotron {
+  color: rgba(0, 0, 0, 0.7);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1vw;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 0.6px;
+  margin: 12px 0 20px 0;
+}
+
+.wraper-desc-jumbotron a {
+  text-decoration: none;
+  width: 221px;
+  height: 42px;
+  border-radius: 30px;
+  background: #3b519c;
+  /* padding: 10px; */
+  display: flex;
+  align-items: center;
+}
+
+.wraper-desc-jumbotron a:hover {
+  background: #283e86;
+  transition: all 0.3s ease-out;
+}
+
+.wraper-desc-jumbotron a svg {
+  margin: 0 10px 0 23px;
+}
+
+.wraper-desc-jumbotron a span {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.container-card-content {
+  margin-top: 73px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 43px;
+}
+
+.container-card-content.flexActive {
+  gap: 35px;
+}
+
+.card {
+  width: 305px;
+  max-width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.container-card-content.flexActive .card {
+  width: 280px;
+}
+
+.card svg {
+  margin: 16px 12px 16px 29px;
+}
+
+.card .wraper-card-desc .card-desc {
+  color: #dcdcdc;
+  font-family: Poppins;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.card .wraper-card-desc .card-count {
+  color: #dcdcdc;
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.mobil {
+  background: #6e16ff;
+}
+
+.kostumer {
+  background: #48a7ff;
+}
+
+.transaksi {
+  background: #3278b9;
+}
+
+.selesai {
+  background: #ffbb36;
+}
+
+.belumSelesai {
+  background: #1ea474;
+}
+
+/* responsive card */
+@media only screen and (min-width: 1368px) {
+  .container-card-content {
+    gap: 33px;
+  }
+
+  .container-card-content.flexActive {
+    gap: 37px;
+  }
+
+  .container-card-content.flexActive .card {
+    width: 290px;
+  }
+
+  footer {
+    bottom: -130px;
+  }
+}
+
+@media only screen and (max-width: 1360px) {
+  .container-card-content {
+    gap: 33px;
+  }
+
+  .card {
+    width: 30%;
+  }
+
+  .container-card-content.flexActive .card {
+    width: 31%;
+  }
+}
+/* main content end */
+
+footer {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  bottom: -170px;
+  left: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.281);
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  color: rgba(0, 0, 0, 0.7);
+  font-family: Poppins;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
