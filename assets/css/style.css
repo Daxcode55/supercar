@@ -128,12 +128,27 @@ html {
 
 /* dashboard style start */
 
-.header-top-nav {
-  float: right;
-  /* width: 1072px; */
+.container-dashboard {
+  display: flex;
+}
+
+.col-right {
   width: 79%;
+  height: 100vh;
+  position: relative;
+  left: 21%;
+  transition: all 0.3s ease-out;
+}
+
+.col-right.navtopActive {
+  transition: all 0.3s ease-out;
+  width: 95%;
+  left: 5%;
+}
+
+.header-top-nav {
+  width: 100%;
   height: 67px;
-  flex-shrink: 0;
   background: #3b519c;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   display: flex;
@@ -145,7 +160,6 @@ html {
   display: flex;
   align-items: center;
   margin-right: 4rem;
-  /* margin-right: 70px; */
 }
 
 .content-nav-top .arrow-bot {
@@ -153,11 +167,19 @@ html {
 }
 
 aside {
-  float: right;
+  position: fixed;
+  left: 0;
+  top: 0;
   width: 21%;
   height: 100vh;
   background: #fff;
   box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease-out;
+}
+
+aside.slideactive {
+  width: 5%;
+  transition: all 0.3s ease-out;
 }
 
 aside .header-side-nav {
@@ -167,6 +189,13 @@ aside .header-side-nav {
   justify-content: space-between;
   padding: 0 1.5rem;
   align-items: center;
+  transition: all 0.3s ease-out;
+}
+
+aside.slideactive .header-side-nav {
+  padding: 4px;
+  justify-content: center;
+  transition: all 0.3s ease-out;
 }
 
 .header-side-nav h1 {
@@ -176,32 +205,58 @@ aside .header-side-nav {
   font-weight: 700;
 }
 
+aside.slideactive .header-side-nav h1 {
+  display: none;
+}
+
 .header-side-nav .icon-burger {
   cursor: pointer;
+  width: 28px;
+  height: 28px;
 }
 
 aside .wraper-profile-side-nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* border: 1px solid black; */
 }
 
 aside .profile-side-nav {
   width: 90%;
+  height: 100px;
   border-bottom: 1px solid #e1e1e1;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 22px 83px 22px 11px;
+  padding: 0 83px 0 11px;
+}
+
+aside.slideactive .profile-side-nav {
+  padding: 22px 0;
+  justify-content: center;
 }
 
 .profile-side-nav img {
   max-width: 100%;
   height: auto;
+  transition: all 0.3s ease-out;
+
+}
+
+aside.slideactive .profile-side-nav img {
+  max-width: 55px;
+  height: auto;
+  transition: all 0.3s ease-out;
+
 }
 
 .profile-side-nav .desc-profile-side {
-  margin-left: 2rem;
+  margin-left: 1.7rem;
+}
+
+aside.slideactive .desc-profile-side {
+  display: none;
 }
 
 .profile-side-nav .desc-profile-side .desc-nama {
@@ -218,37 +273,83 @@ aside .profile-side-nav {
   font-family: Poppins;
 }
 
-nav {
-  /* border: 1px solid black; */
+nav ul {
   width: 100%;
-  /* margin-top: 2rem; */
-  padding: 0 18px;
+  /* padding: 0 15px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 nav ul li {
+  width: 90%;
+  /* border: 1px solid red; */
+  height: 50px;
   list-style-type: none;
+  margin-top: 2rem;
+  /* margin-left: 6px; */
+  padding: 4px;
 }
 
 nav ul li a {
   text-decoration: none;
-  color: #000;
-  font-family: Poppins;
-  font-size: 1.2vw;
-  font-weight: 600;
   display: flex;
   align-items: center;
   width: 100%;
-  margin-top: 2rem;
-  padding: 12px 21px 12px 21px;
+  height: 100%;
+  /* padding: 12px 21px 12px 21px; */
+  padding-left: 21px;
   border-radius: 10px;
+  transition: all 0.3s ease-in;
+  /* border: 1px solid black; */
 }
 
 nav ul li a:hover {
-  background-color: #D8D8D8;
+  background-color: #d8d8d8;
   transition: 0.3s;
+}
+
+aside.slideactive nav ul li a {
+	/* width: calc(48px - (4px * 2)); */
+  padding: 0 4px 0 4px;
+  transition: all 0.3s ease-in;
+  position: relative;
+  align-items: center;
+  justify-content: center;
 }
 
 nav ul li a svg {
   margin-right: 0.9rem;
+  transition: all 0.3s ease-in;
+  /* border: 1px solid black; */
+}
+
+aside.slideactive nav ul li a svg {
+  margin-right: 0;
+  transition: all 0.3s ease-in;
+}
+
+nav ul li a p {
+  font-family: Poppins;
+  font-size: 1.2vw;
+  font-weight: 600;
+  color: #000;
+  transition: all 0.3s;
+  transition-delay: 0.1s;
+  transform-origin: left;
+  /* display: none; */
+}
+
+aside.slideactive nav ul li a p {
+  transition: all 0.3s;
+  transform: scale(0);
+  width: 100%;
+  position: absolute;
+  left: -500px;
+  /* display: none; */
 }
 /* dashboard style end */
+
+.main-content {
+  /* border: 1px solid black; */
+}
