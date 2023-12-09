@@ -10,3 +10,11 @@ iconBurger.addEventListener("click", () => {
   cardContent.classList.toggle("flexActive");
 });
 
+
+// let links = document.querySelectorAll(".links");
+
+function openPage(elmnt, color) {
+  elmnt.style.backgroundColor = color;
+}
+
+// document.getElementById("defaultOpen").click();
