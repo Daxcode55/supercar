@@ -29,7 +29,7 @@
         <h3>Data Mobil</h3>
         <div class="wraper-tabel-top">
             <div class="content-tabel-left">
-                <a href="#">
+                <a href="<?php echo base_url() . 'admin/mobil_add'; ?>">
                     <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
                         <g clip-path="url(#clip0_21_801)">
                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -66,25 +66,72 @@
             <table>
                 <tr>
                     <th style="width: 30px;">No</th>
-                    <th style="width: 130px;">Merk Mobil</th>
+                    <th style="width: 150px;">Merk Mobil</th>
                     <th style="width: 130px;">Plat</th>
                     <th style="width: 130px;">Warna</th>
                     <th style="width: 150px;">Tahun Pembuatan</th>
-                    <th style="width: 140px;">Status</th>
-                    <th style="width: 240px;">aksi</th>
+                    <th style="width: 150px;">Status</th>
+                    <th style="width: 170px;"></th>
                 </tr>
-
-                <tr>
-                    <td>1</td>
-                    <td>toyota</td>
-                    <td>Dm 3090 Cm</td>
-                    <td>merah</td>
-                    <td>2009</td>
-                    <td>tersedia</td>
-                    <td></td>
-                </tr>
+                <?php
+                $no = 1;
+                foreach ($mobil as $m) {
+                    ?>
+                    <tr>
+                        <td>
+                            <?php echo $no++; ?>
+                        </td>
+                        <td>
+                            <?php echo $m->mobil_merk ?>
+                        </td>
+                        <td>
+                            <?php echo $m->mobil_plat ?>
+                        </td>
+                        <td>
+                            <?php echo $m->mobil_warna ?>
+                        </td>
+                        <td>
+                            <?php echo $m->mobil_tahun ?>
+                        </td>
+                        <td>
+                            <?php
+                            if ($m->mobil_status == "1") {
+                                echo '<span style="color: green; font-weight: bold;">Tersedia</span>';
+                            } else if ($m->mobil_status == "2") {
+                                echo '<span style="color: orange; font-weight: bold;">Sedang Di Rental</span>';
+                            }
+                            ?>
+                        </td>
+                        <td class="td-btn">
+                            <a class="btn-action edit"
+                                href="<?php echo base_url() . 'admin/mobil_edit/' . $m->mobil_id; ?>">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19"
+                                    fill="none">
+                                    <path
+                                        d="M15.0322 1.59283L17.4072 3.96783L15.5967 5.77917L13.2217 3.40417L15.0322 1.59283ZM6.33337 12.6667H8.70837L14.4773 6.89779L12.1022 4.52279L6.33337 10.2917V12.6667Z"
+                                        fill="white" />
+                                    <path
+                                        d="M15.0417 15.0417H6.45842C6.43783 15.0417 6.41646 15.0496 6.39588 15.0496C6.36975 15.0496 6.34363 15.0425 6.31671 15.0417H3.95833V3.95833H9.37888L10.9622 2.375H3.95833C3.08512 2.375 2.375 3.08433 2.375 3.95833V15.0417C2.375 15.9157 3.08512 16.625 3.95833 16.625H15.0417C15.4616 16.625 15.8643 16.4582 16.1613 16.1613C16.4582 15.8643 16.625 15.4616 16.625 15.0417V8.1795L15.0417 9.76283V15.0417Z"
+                                        fill="white" />
+                                </svg>
+                                <p>Edit</p>
+                            </a>
+                            <a class="btn-action hapus"
+                                href="<?php echo base_url() . 'admin/mobil_hapus/' . $m->mobil_id; ?>">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19"
+                                    fill="none">
+                                    <path
+                                        d="M5.54163 16.625C5.10621 16.625 4.73333 16.4698 4.423 16.1595C4.11267 15.8492 3.95776 15.4766 3.95829 15.0417V4.75H3.16663V3.16667H7.12496V2.375H11.875V3.16667H15.8333V4.75H15.0416V15.0417C15.0416 15.4771 14.8865 15.85 14.5761 16.1603C14.2658 16.4706 13.8932 16.6255 13.4583 16.625H5.54163ZM7.12496 13.4583H8.70829V6.33333H7.12496V13.4583ZM10.2916 13.4583H11.875V6.33333H10.2916V13.4583Z"
+                                        fill="white" />
+                                </svg>
+                                <p>Hapus</p>
+                            </a>
+                        </td>
+                    </tr>
+                    <?php
+                }
+                ?>
             </table>
         </div>
     </div>
-
-    <!-- jumbotron -->
+</section>

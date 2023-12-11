@@ -11,10 +11,7 @@ iconBurger.addEventListener("click", () => {
 });
 
 
-// let links = document.querySelectorAll(".links");
-
-function openPage(elmnt, color) {
-  elmnt.style.backgroundColor = color;
-}
-
-// document.getElementById("defaultOpen").click();
+let wrapTop = document.querySelector(".wraper-nav-content");
+document.querySelector(".content-nav-top").addEventListener("click", () => {
+  wrapTop.classList.toggle("activeCntn");
+})

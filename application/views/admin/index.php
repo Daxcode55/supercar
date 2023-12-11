@@ -34,7 +34,9 @@
 
         <div class="content-right-jumbotron">
             <div class="wraper-desc-jumbotron">
-                <p class="desc1-jumbotron">Selamat datang <span><?php echo $this->session->userdata('nama'); ?></span> di aplikasi
+                <p class="desc1-jumbotron">Selamat datang <span>
+                        <?php echo $this->session->userdata('nama'); ?>
+                    </span> di aplikasi
                     rental mobil <span>superCar</span></p>
 
                 <p class="desc2-jumbotron">SuperCar adalah aplikasi pengelolaan rental mobil yang
@@ -63,7 +65,9 @@
 
             <div class="wraper-card-desc">
                 <p class="card-desc">Jumlah Mobil</p>
-                <p class="card-count"><?php echo $this->m_rental->get_data('mobil')->num_rows(); ?></p>
+                <p class="card-count">
+                    <?php echo $this->m_rental->get_data('mobil')->num_rows(); ?>
+                </p>
             </div>
         </div>
 
@@ -76,7 +80,9 @@
 
             <div class="wraper-card-desc">
                 <p class="card-desc">Jumlah kostumer</p>
-                <p class="card-count"><?php echo $this->m_rental->get_data('kostumer')->num_rows(); ?></p>
+                <p class="card-count">
+                    <?php echo $this->m_rental->get_data('kostumer')->num_rows(); ?>
+                </p>
             </div>
         </div>
 
@@ -89,7 +95,9 @@
 
             <div class="wraper-card-desc">
                 <p class="card-desc">Jumlah transaksi</p>
-                <p class="card-count"><?php echo $this->m_rental->get_data('transaksi')->num_rows(); ?></p>
+                <p class="card-count">
+                    <?php echo $this->m_rental->get_data('transaksi')->num_rows(); ?>
+                </p>
             </div>
         </div>
 
@@ -102,7 +110,9 @@
 
             <div class="wraper-card-desc">
                 <p class="card-desc">Rental selesai</p>
-                <p class="card-count"><?php echo $this->m_rental->edit_data(array('transaksi_status'=>1),'transaksi')->num_rows(); ?></p>
+                <p class="card-count">
+                    <?php echo $this->m_rental->edit_data(array('transaksi_status' => 1), 'transaksi')->num_rows(); ?>
+                </p>
             </div>
         </div>
 
@@ -115,7 +125,10 @@
 
             <div class="wraper-card-desc">
                 <p class="card-desc">Rental belum selesai</p>
-                <p class="card-count"><?php echo $this->m_rental->edit_data(array('transaksi_status'=>0),'transaksi')->num_rows(); ?></p>
+                <p class="card-count">
+                    <?php echo $this->m_rental->edit_data(array('transaksi_status' => 0), 'transaksi')->num_rows(); ?>
+                </p>
             </div>
         </div>
     </div>
+</section>
