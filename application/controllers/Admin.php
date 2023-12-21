@@ -12,13 +12,6 @@ class Admin extends CI_Controller
     }
     function index()
     {
-        // $data['transaksi'] = $this->db->query("select * from transaksi order by transaksi_id desc limit 10")->result();
-
-        // $data['kostumer'] = $this->db->query("select * from kostumer order by kostumer_id desc limit 10")->result();
-
-        // $data['mobil'] = $this->db->query("select * from mobil order by mobil_id desc limit 10")->result();
-
-        // $data['count_rows'] = $this->m_rental->get_count('mobil')->count_all_results();
         $this->load->view('admin/asidenav');
         $this->load->view('admin/header');
         $this->load->view('admin/index');
@@ -484,5 +477,12 @@ class Admin extends CI_Controller
         $this->load->view('admin/header');
         $this->load->view('admin/tentang');
         $this->load->view('admin/footer');
+    }
+
+    function cari() {
+        $search_term = $this->input->get('search');
+        $data['results'] = $this->your_model->get_data($search_term);
+
+        $this->load->view('your_view', $data);
     }
 }

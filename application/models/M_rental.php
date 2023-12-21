@@ -24,5 +24,12 @@ class M_rental extends CI_Model
         $this->db->where($where);
         $this->db->delete($table);
     }
+
+    function cari_data($search_term)
+    {
+        $this->db->like('field_name', $search_term);
+        $query = $this->db->get('your_table');
+        return $query->result();
+    }
 }
 ?>

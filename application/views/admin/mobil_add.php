@@ -2,10 +2,9 @@
 <section class="main-content">
     <div class="page-location">
         <div class="page-left">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-                <path
-                    d="M22.75 9.55609V2.625H18.375V5.82148L14 1.75L0 14.875H3.5V26.25H11.375V17.5H16.625V26.25H24.5V14.875H28L22.75 9.55609Z"
-                    fill="#4D4D4D" />
+            <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                    d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h6l2 2h8q.825 0 1.413.588T22 8H4v10l2.4-8h17.1l-2.575 8.575q-.2.65-.737 1.038T19 20H4Z" />
             </svg>
             <span>Data Mobil</span>
         </div>
